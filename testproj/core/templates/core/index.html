@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>42 Coffee Cups Test Assignment</h1>
+<table class="contact-table">
+	<tr>
+		<td>
+			<dl>
+				<dt>Name</dt>
+				<dd>{{ contact.name }}</dd>	
+				<dt>Last name</dt>
+				<dd>{{ contact.last_name }}</dd>
+				<dt>Date of birth</dt>
+				<dd>{{ contact.birth_date }}</dd>
+				<dt>Bio</dt>
+				<dd>{{ contact.bio|linebreaks }}</dd>
+			</dl>
+		<td>
+			<dl>
+				Contacts
+				<dt>Email:</dt>
+				<dd>{{ contact.email }}</dd>	
+				<dt>Jabber</dt>
+				<dd>{{ contact.jabber }}</dd>
+				<dt>Skype:</dt>
+				<dd>{{ contact.skype }}</dd>
+				<dt>Other contacts:</dt>
+				<dd>{{ contact.other|linebreaks }}</dd>
+			</dl>
+		</td>
+
+	</tr>
+</table>
+{% endblock %}
