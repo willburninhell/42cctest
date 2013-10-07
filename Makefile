@@ -14,3 +14,4 @@ syncdb:
 
 run:
 	python manage.py runserver $(HOST):$(PORT)
+
