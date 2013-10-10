@@ -13,7 +13,7 @@ MANAGERS = ADMINS
 
 PROJPATH = os.path.abspath(os.path.dirname(__file__))
 
-fullpath = lambda *x: os.path.join(PROJPATH, "/../", *x)
+fullpath = lambda *x: os.path.join(PROJPATH, "../", *x)
 
 DATABASES = {
     'default': {
