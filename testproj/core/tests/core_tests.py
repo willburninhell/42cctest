@@ -4,7 +4,8 @@ from testproj.core.models import Contact
 
 
 class ContactTestCase(TestCase):
-    def test_animals_can_speak(self):
+
+    def test_fixture_loading(self):
         """All data are in"""
         #self.skipTest("Not implemented. `YET!")
         url = reverse("index")
@@ -12,3 +13,4 @@ class ContactTestCase(TestCase):
         self.assertContains(response, "antisocial@slavutich.kiev.ua")
         self.assertContains(response, "Ihor")
         self.assertEqual(Contact.objects.count(), 1)
+
