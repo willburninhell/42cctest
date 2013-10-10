@@ -1,5 +1,8 @@
 .contact-table {
 	width: 80%;
-	margin-left: auto;
+	margin-left: 0;
 	border: 0;
+}
+.col1 {
+	width:50%;
 }
