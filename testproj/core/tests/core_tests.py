@@ -28,6 +28,6 @@ class ContactTestCase(TestCase):
         self.assertEqual(log1.method, "POST")
 
     def test_settings_context_processor(self):
-        url = reverse("/")
+        url = reverse("index")
         response = self.client.get(url)
-        self.assertEqual(response.context['settings'], settings)
+        self.assertEqual(response.context['SETTINGS'], settings)

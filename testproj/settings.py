@@ -1,4 +1,5 @@
 # Django settings for testproj project.
+import django.conf.global_settings as DEFAULT_SETTINGS
 
 import os
 
@@ -118,6 +119,10 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     fullpath("templates"),
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
+    'testproj.core.context_processors.projectsettings',
 )
 
 INSTALLED_APPS = (
