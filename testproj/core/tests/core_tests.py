@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.core.urlresolvers import reverse
 from testproj.core.models import Contact, RequestLog
+from django.conf import settings
 
 
 class ContactTestCase(TestCase):
@@ -25,3 +26,8 @@ class ContactTestCase(TestCase):
         log1 = RequestLog.objects.all()[1]
         self.assertEqual(log1.url, "/requests/")
         self.assertEqual(log1.method, "POST")
+
+    def test_settings_context_processor(self):
+        url = reverse("/")
+        response = self.client.get(url)
+        self.assertEqual(response.context['settings'], settings)
