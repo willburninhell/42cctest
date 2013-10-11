@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="request-table">
+	<tr>
+		<td>Date/Time</td>
+		<td>Method</td>
+		<td>Requested URL</td>
+		<td>Query string</td>
+	</tr>
+{% for entry in entries %}
+	<tr>
+		<td>{{ entry.date }}</td>
+		<td>{{ entry.date.method }}</td>
+		<td>{{ entry.url }}</td>
+		<td>{{ entry.query_str }}</td>
+	</tr>
+{% endfor %}
+</table>
+{% endblock %}
