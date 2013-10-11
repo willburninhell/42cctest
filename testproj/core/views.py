@@ -9,5 +9,5 @@ def index(request):
 
 
 def requests(request):
-    entries = RequestLog.objects.all()
+    entries = RequestLog.objects.all()[:10]
     return render(request, "core/requests.html", {'entries': entries})
